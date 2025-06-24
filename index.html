@@ -32,7 +32,7 @@
     </div>
     <script>
       const offset = (new Date()).getTimezoneOffset() * 60 * 1000;
-      const epochDays = Math.floor((Date.now() + offset) / (1000 * 60 * 60 * 24));
+      const epochDays = Math.floor((Date.now() - offset) / (1000 * 60 * 60 * 24));
       const mg = epochDays % 2 === 0 ? "50mg" : "25mg";
       document.getElementById("content").innerHTML = mg;
     </script>
